@@ -1,0 +1,29 @@
+<div class="form-container">
+<form action="input.php" enctype="multipart/form-data" method="post">
+    <h1>Сообщите нам об ошибке</h1>
+    <div class="form-inner">
+        <label>ФИО</label>
+        <input type="text" required name="fio">
+        
+    </div>
+    <div class="form-inner">
+        <label>Email</label>
+        <input type="email" required name="email">
+        
+        </div>
+    <div class="form-inner">
+        <label>Телефон</label>
+        <input type="phone" required name="phone">
+        </div>
+    <div class="form-inner">
+        <label>Информация об ошибке</label>
+        <input type="text" required name="info">
+    </div>
+    <div class="form-inner__file">
+        <label>Скриншот ошибки</label>
+        <input type="file" name="file" multiple accept="image/*,image/jpeg">
+    </div>
+    
+<input class="form-button" type="submit" value="Отправить">
+</form>
+</div>
