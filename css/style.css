@@ -30,24 +30,24 @@ h1{
     padding: 20px;
     max-width: 416px;
 }
-.form-inner, .form-inner__file{
+.error-form-container .form-inner, .error-form-container .form-inner__file{
     margin-bottom: 10px;
     color: purple;
     display: flex;
     flex-direction: column;
 }
 
-.form-inner input{
+.error-form-container .form-inner input{
     height: 35px;
     border: none;
     border-bottom: 1px solid purple;
     font-size: 20px;
     color: purple;
 }
-.form-inner__file label{
+.error-form-container .form-inner__file label{
     margin-bottom: 5px;
 }
-.form-button{
+.error-form-container .form-button{
     width: 100%;
     padding: 10px;
     font-size: 20px;

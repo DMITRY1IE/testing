@@ -1,5 +1,5 @@
 <div class="error-form-container">
-<form id="error-form" action="" enctype="multipart/form-data">
+<form id="error-form-<?php echo rand(); ?>" action="" enctype="multipart/form-data">
     <h1>Сообщите нам об ошибке</h1>
     <div class="form-inner">
         <label>ФИО</label>
@@ -32,29 +32,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
  $(document).ready(function () {
-    $("#error-form").submit(function () {
+    $("form").submit(function () {
         // Получение ID формы
         var formID = $(this).attr('id');
         // Добавление решётки к имени ID
         var formNm = new FormData($('#' + formID)[0]);
-        var info = $('#form-error');
         $.ajax({
             processData: false,
             contentType: false,
             type: "POST",
             url: 'https://l103555.hostru08.fornex.host/test.site/input.php',
             data: formNm,
-            beforeSend: function () {
-                // Вывод текста в процессе отправки
-                $(info).html('<p style="text-align:center">Отправка...</p>');
-            },
             success: function (data) {
                 // Вывод текста результата отправки
-                $(info).html('<p style="text-align:center">'+data+'</p>');
+                alert(data);
             },
             error: function (jqXHR, text, error) {
                 // Вывод текста ошибки отправки
-                $(info).html(error);
+                alert(error);
             }
         });
         return false;
