@@ -17,7 +17,6 @@ if(isset($_POST["fio"]) && isset($_POST["email"]) && isset($_POST["phone"])
     $headers .= "From: info@test.site <info@test.site>\r\n";//почта с хоста
     if(mail($mailTo, $subject, $message, $headers)) {
         echo "Спасибо, ".$_POST['fio'].", мы свяжемся с вами в самое ближайшее время!";
-        print_r($_FILES["file"]);
     } else {
         echo "Сообщение не отправлено!"; 
     }
